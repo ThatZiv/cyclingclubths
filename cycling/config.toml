@@ -1,0 +1,5 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "Cycling Club at Troy High"
+theme = "hugo-theme-novela-master"
+website = "https://cycle.zavaar.net"
