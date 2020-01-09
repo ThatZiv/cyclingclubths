@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Zavaar Shah on Cycling Club at Troy High</title>
-    <link>http://thatziv.github.io/cyclingclubths/authors/</link>
+    <link>//thatziv.github.io/cyclingclubths/authors.html</link>
     <description>Recent content in Zavaar Shah on Cycling Club at Troy High</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="http://thatziv.github.io/cyclingclubths/authors/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="//thatziv.github.io/cyclingclubths/authors/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

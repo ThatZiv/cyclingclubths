@@ -1,5 +1,7 @@
-baseURL = "http://thatziv.github.io/cyclingclubths"
+baseURL = "//thatziv.github.io/cyclingclubths"
 languageCode = "en-us"
 title = "Cycling Club at Troy High"
 theme = "hugo-theme-novela-master"
 website = "https://cycle.zavaar.net"
+relativeURLs = true
+uglyURLs = true
