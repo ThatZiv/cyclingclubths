@@ -1,0 +1,10 @@
+name = "Zua theme for Hugo"
+license = "MIT"
+description = "The theme used in cycling club website at troy high"
+tags = []
+features = []
+min_version = "0.0.1"
+
+[author]
+  name = "Zavaar Shah"
+  homepage = "http://zavaar.net"
