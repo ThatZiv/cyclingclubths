@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Cycling Club at Troy High</title>
+    <link>//thatziv.github.io/post.html</link>
+    <description>Recent content in Posts on Cycling Club at Troy High</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 08 Jan 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="//thatziv.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>People</title>
+      <link>//thatziv.github.io/post/people.html</link>
+      <pubDate>Wed, 08 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>//thatziv.github.io/post/people.html</guid>
+      <description>People Involved    Position First Name Last Name Grade Contact     President Zavaar Shah 11 thatziv@gmail.com   Vice-President Alex Prater 11 alexjprater@gmail.com    </description>
+    </item>
+    
+    <item>
+      <title>Routes</title>
+      <link>//thatziv.github.io/post/routes.html</link>
+      <pubDate>Tue, 07 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>//thatziv.github.io/post/routes.html</guid>
+      <description>Below is just an example route. Maphtml,body,#viewDiv {padding: 0;margin: 0;height: 100%;width: 100%;}require([&#34;esri/Map&#34;,&#34;esri/views/MapView&#34;,&#34;esri/Graphic&#34;,&#34;esri/layers/GraphicsLayer&#34;,&#34;esri/widgets/Locate&#34;,&#34;esri/widgets/Track&#34;,&#34;esri/widgets/Fullscreen&#34;,], function (Map, MapView, Graphic, GraphicsLayer, Locate, Track, Fullscreen) {var map = new Map({basemap: &#34;streets-navigation-vector&#34;});var view = new MapView({container: &#34;viewDiv&#34;,map: map,center: [-83.149274, 42.606344],zoom: 11});var graphicsLayer = new GraphicsLayer();map.</description>
+    </item>
+    
+    <item>
+      <title>Information</title>
+      <link>//thatziv.github.io/post/about.html</link>
+      <pubDate>Sat, 07 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>//thatziv.github.io/post/about.html</guid>
+      <description>Information  Cycling Club is a club in Troy High School Website: https://cycle.zavaar.net Contact: thatziv@gmail.com or alexjprater@gmail.com Twitter: @cyclingclubths  </description>
+    </item>
+    
+    <item>
+      <title>Feed</title>
+      <link>//thatziv.github.io/post/feed.html</link>
+      <pubDate>Tue, 08 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>//thatziv.github.io/post/feed.html</guid>
+      <description>Updates Tweets by cyclingclubths </description>
+    </item>
+    
+  </channel>
+</rss>
