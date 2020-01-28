@@ -17,7 +17,7 @@
       <pubDate>Wed, 08 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>//thatziv.github.io/post/people.html</guid>
-      <description>People Involved    Position First Name Last Name Grade Contact     President Zavaar Shah 11 thatziv@gmail.com   Vice-President Alex Prater 11 alexjprater@gmail.com    </description>
+      <description>People Involved    Position First Name Last Name Grade Contact     President Zavaar Shah 11 thatziv@gmail.com   Vice-President Alex Prater 11 alexjprater@gmail.com   Secretary Sohil Ramachandra 11 sohil.ramachandra@gmail.com    </description>
     </item>
     
     <item>
@@ -26,7 +26,7 @@
       <pubDate>Tue, 07 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>//thatziv.github.io/post/routes.html</guid>
-      <description>Below is just an example route. Maphtml,body,#viewDiv {padding: 0;margin: 0;height: 100%;width: 100%;}require([&#34;esri/Map&#34;,&#34;esri/views/MapView&#34;,&#34;esri/Graphic&#34;,&#34;esri/layers/GraphicsLayer&#34;,&#34;esri/widgets/Locate&#34;,&#34;esri/widgets/Track&#34;,&#34;esri/widgets/Fullscreen&#34;,], function (Map, MapView, Graphic, GraphicsLayer, Locate, Track, Fullscreen) {var map = new Map({basemap: &#34;streets-navigation-vector&#34;});var view = new MapView({container: &#34;viewDiv&#34;,map: map,center: [-83.149274, 42.606344],zoom: 11});var graphicsLayer = new GraphicsLayer();map.</description>
+      <description>Winter Route #1 Maphtml,body,#viewDiv {padding: 0;margin: 0;height: 100%;width: 100%;}#roleInfo {position: relative;z-index: 99;border-radius: 2px;border: 2px solid gray;color: gray;background: white;padding: 10px;opacity: 0.65;}require([&#34;esri/Map&#34;,&#34;esri/views/MapView&#34;,&#34;esri/Graphic&#34;,&#34;esri/layers/GraphicsLayer&#34;,&#34;esri/widgets/Locate&#34;,&#34;esri/widgets/Track&#34;,&#34;esri/widgets/Fullscreen&#34;,], function (Map, MapView, Graphic, GraphicsLayer, Locate, Track, Fullscreen) {var map = new Map({basemap: &#34;streets-navigation-vector&#34;});var view = new MapView({container: &#34;</description>
     </item>
     
     <item>
