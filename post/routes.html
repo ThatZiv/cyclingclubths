@@ -259,8 +259,7 @@ xmlns="http://www.w3.org/2000/svg"
     ], function (Map, MapView, Graphic, GraphicsLayer, Locate, Track, Fullscreen, Legend, FeatureLayer) {
    
       var map = new Map({
-        basemap: new Date().getHours() > 18  ? "gray" : "dark-gray-vector",
-  
+        basemap: new Date().getHours() < 18  ? "gray" : "dark-gray-vector",
       });
 
       var view = new MapView({
@@ -480,7 +479,13 @@ xmlns="http://www.w3.org/2000/svg"
 </head>
 <body>
   <div id="roleInfo">
-    <b>START TIME: </b>TBD by weather (weekend of 1/31/20 - 2/2/20), <b>END TIME: </b>TBD, <b>ESTIMATED DURATION: </b>01:30:00, <b>TOTAL DISTANCE: </b>16.0 Miles, <b>STATUS: </b>Incomplete, <b>TIME ELAPSED: </b>NULL
+    <b>START TIME: </b>02/01/2020 @ 12:00 PM (noon) EST , 
+    <b>END TIME: </b>02/01/2020 @ 1:30 PM EST, 
+    <b>ESTIMATED DURATION: </b>01:30:00, 
+    <b>TOTAL DISTANCE: </b>16.0 Miles, 
+    <b>STATUS: </b>Incomplete, 
+    <b>TIME ELAPSED: </b>NULL
+    <b>PARTICIPANTS: </b>NULL
   </div>
   <div id="roleInfo">
     <b>KEY:</b><br>
