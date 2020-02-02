@@ -22,16 +22,16 @@
 
 
 
-<title>Winter Route 1 - CURRENT | Cycling Club at Troy High</title>
+<title>Winter Route 1 - COMPLETED | Cycling Club at Troy High</title>
 <meta name="description" content="Winter Route #1 Maphtml,body,#viewDiv {padding: 0;margin: 0;height: 100%;width: 100%;}#roleInfo {position: relative;z-index: 99;border-radius: 2px;border: 2px solid gray;color: gray;background: white;padding: 10px;opacity: 0.65;}#departure {color: #7893F4}#arrival {color: #D43535}require([&#34;esri/Map&#34;,&#34;esri/views/MapView&#34;,&#34;esri/Graphic&#34;,&#34;esri/layers/GraphicsLayer&#34;,&#34;esri/widgets/Locate&#34;,&#34;esri/widgets/Track&#34;,&#34;esri/widgets/Fullscreen&#34;,&#34;esri/widgets/Legend&#34;,&#34;esri/layers/FeatureLayer&#34;,], function (Map, MapView, Graphic, GraphicsLayer, Locate, Track, Fullscreen, Legend, FeatureLayer) {var map = new Map({basemap: new Date().">
-<meta property="og:title" content="Winter Route 1 - CURRENT | Cycling Club at Troy High">
+<meta property="og:title" content="Winter Route 1 - COMPLETED | Cycling Club at Troy High">
 <meta property="og:site_name" content="Cycling Club at Troy High">
 <meta property="og:description" content="Winter Route #1 Maphtml,body,#viewDiv {padding: 0;margin: 0;height: 100%;width: 100%;}#roleInfo {position: relative;z-index: 99;border-radius: 2px;border: 2px solid gray;color: gray;background: white;padding: 10px;opacity: 0.65;}#departure {color: #7893F4}#arrival {color: #D43535}require([&#34;esri/Map&#34;,&#34;esri/views/MapView&#34;,&#34;esri/Graphic&#34;,&#34;esri/layers/GraphicsLayer&#34;,&#34;esri/widgets/Locate&#34;,&#34;esri/widgets/Track&#34;,&#34;esri/widgets/Fullscreen&#34;,&#34;esri/widgets/Legend&#34;,&#34;esri/layers/FeatureLayer&#34;,], function (Map, MapView, Graphic, GraphicsLayer, Locate, Track, Fullscreen, Legend, FeatureLayer) {var map = new Map({basemap: new Date().">
 <meta property="og:url" content="//thatziv.github.io/post/routes/route1.html">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content='//thatziv.github.io/images/locationCYCLE.png'><meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Winter Route 1 - CURRENT | Cycling Club at Troy High">
+<meta name="twitter:title" content="Winter Route 1 - COMPLETED | Cycling Club at Troy High">
 
 	<link rel="canonical" href="//thatziv.github.io/post/routes/route1.html">
 
@@ -121,7 +121,7 @@
     <section id="articleHero" class="section narrow">
     <div class="article-hero">
         <header class="article-header">
-            <h1 class="article-hero-heading">Winter Route 1 - CURRENT</h1>
+            <h1 class="article-hero-heading">Winter Route 1 - COMPLETED</h1>
             <div class="article-hero-subtitle">
                 <div class="article-meta">
                     
@@ -501,6 +501,7 @@ xmlns="http://www.w3.org/2000/svg"
       var tog = true
       
       var change = true
+      var status = null
       var x = setInterval(function () {
         if (!tog) {return}
         
@@ -517,14 +518,24 @@ xmlns="http://www.w3.org/2000/svg"
         if (change) {
         document.getElementById("cntDwn").innerHTML = days + "d " + hours + "h "
           + minutes + "m " + seconds + "s ";
+          
         }
+        status = "Incomplete"
+        document.getElementById("status").innerHTML = status;
+        document.getElementById("status").style = "color: red; text-align: center";
         if (distance < 0 && endDist > 0) {
-          document.getElementById("status").innerHTML = "In Progress";
+          status = "In Progress"
+          document.getElementById("status").innerHTML = status;
+          document.getElementById("cntDwn").innerHTML = status;
+          document.getElementById("cntDwn").style ="color: orange; text-align: center"
           document.getElementById("status").style = "color: orange; text-align: center"
           change=false
         } else if(distance < 0 && endDist < 0) {
           clearInterval(x);
-          document.getElementById("status").innerHTML = "Completed";
+          status = "Completed"
+          document.getElementById("cntDwn").innerHTML = status
+          document.getElementById("status").innerHTML = status;
+          document.getElementById("cntDwn").style = "color: green; text-align: center"
           document.getElementById("status").style = "color: green; text-align: center";
           tog = false;
         }
@@ -538,7 +549,7 @@ xmlns="http://www.w3.org/2000/svg"
 
 <body>
   <div id="roleInfo">
-    <h3 id="status" style="color:gray; text-align: center"><b>COUNTDOWN: </b> <span id="cntDwn"></span></h3>
+    <h3 style="color:gray; text-align: center"><b>COUNTDOWN: </b> <span id="cntDwn"></span></h3>
     <b>STATUS: </b> <span id="status"></span>
     <b>START TIME: </b>02/01/2020 @ 12:00 PM (noon) EST,
     <b>END TIME: </b>02/01/2020 @ 1:30 PM EST,
