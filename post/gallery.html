@@ -278,14 +278,14 @@ xmlns="http://www.w3.org/2000/svg"
         padding: 12px 12px;
         position: absolute;
         background-color: rgba(0, 0, 0, 0.8);
-        border-radius: 5px 0 5px 0; 
+        border-radius: 0 0 5px 0; 
         top: 0;
         font-weight: bolder;
         
     }
     .numbertext:hover {
         color: #141414;
-        border-radius: 5px 0 5px 0; 
+        border-radius: 0 0 5px 0; 
         background-color: rgba(231, 231, 231, 0.8);
     }
 
@@ -357,11 +357,13 @@ xmlns="http://www.w3.org/2000/svg"
         
         var img = document.createElement("img")
         img.setAttribute("src", `/gallery/${pics[i]}`)
+        img.setAttribute("onclick",`window.location='/gallery/${pics[i]}'`)
         img.setAttribute("style", "width:100%")
         
         var numberTxt = document.createElement("div")
         numberTxt.setAttribute("class", "numbertext")
         numberTxt.innerHTML = `${parseInt(i)+1} / ${pics.length}`
+        numberTxt.setAttribute("onclick",`window.location='/gallery/${pics[i]}'`)
         var dots = document.createElement("span")
         dots.setAttribute("class", "dot")
         dots.setAttribute("onclick", `currentSlide(${parseInt(i)+1})`)
@@ -381,7 +383,7 @@ xmlns="http://www.w3.org/2000/svg"
         showSlides(slideIndex += n);
     }
 
-    
+    // Thumbnail image controls
     function currentSlide(n) {
         showSlides(slideIndex = n);
     }

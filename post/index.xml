@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Cycling Club at Troy High</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 01 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 10 Feb 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="//thatziv.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Winter Route 2 - CURRENT</title>
+      <link>//thatziv.github.io/post/routes/route2.html</link>
+      <pubDate>Mon, 10 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>//thatziv.github.io/post/routes/route2.html</guid>
+      <description>Winter Route #1 Maphtml,body,#viewDiv {padding: 0;margin: 0;height: 100%;width: 100%;}#roleInfo {position: relative;z-index: 99;border-radius: 2px;border: 2px solid gray;color: gray;background: white;padding: 10px;opacity: 0.65;}#departure {color: #7893F4}#arrival {color: #D43535}require([&#34;esri/Map&#34;,&#34;esri/views/MapView&#34;,&#34;esri/Graphic&#34;,&#34;esri/layers/GraphicsLayer&#34;,&#34;esri/widgets/Locate&#34;,&#34;esri/widgets/Track&#34;,&#34;esri/widgets/Fullscreen&#34;,&#34;esri/widgets/Legend&#34;,&#34;esri/layers/FeatureLayer&#34;,], function (Map, MapView, Graphic, GraphicsLayer, Locate, Track, Fullscreen, Legend, FeatureLayer) {var map = new Map({basemap: new Date().</description>
+    </item>
     
     <item>
       <title>Gallery</title>
