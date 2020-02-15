@@ -121,7 +121,52 @@
         
     </div>
     <div class="subheading-container">
-            <h1>Welcome. <h2>Cycling Club is an unofficial club at Troy High School that gives students the opportunity to bike with others.</h2></h1>
+            <h1>Welcome. <style>
+    @keyframes shadow-pulse {
+        0% {
+            box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+            border-radius: 25px;
+        }
+
+        100% {
+            box-shadow: 0 0 0 35px rgba(0, 0, 0, 0);
+            border-radius: 25px;
+        }
+    }
+    @keyframes blur {
+        0% {
+            filter: blur(0.3rem)
+        }
+        100% {
+            filter: blur(0)
+        }
+    }
+    #randomLol {
+        transition: 0.25s;
+    }
+</style>
+<h2 id="randomLol">Loading...</h2>
+
+<script>
+    const messages = [
+        "Join our GroupMe <a href='https://groupme.com/join_group/57809734/LAZQ25vl'>here</a>.",
+        "Cycling Club is an unofficial club at Troy High School that gives students the opportunity to bike with others",
+        "Follow us on Twitter <a href='https://twitter.com/cyclingclubths'>here</a>.",
+        "Follow us on Instagram <a href='http://instagram.com/thscyclingclub'>here</a>",
+        "Don't forget to wear your helmet!"
+    ]
+    let tog = false
+    setInterval(function s() {
+        let random = (Math.floor(Math.random() * Math.floor(messages.length), 2))
+        document.getElementById("randomLol").innerHTML = messages[random]
+        document.getElementById("randomLol").style.opacity = 0
+        setTimeout(() => {
+            document.getElementById("randomLol").style.opacity = 1
+        }, 250)
+        
+        return s
+    }(), 10 * 1000)
+</script> </h1>
             
             <div class="bio-container">
         
@@ -205,7 +250,42 @@ xmlns="http://www.w3.org/2000/svg"
         
             
             
+            <a href="./post/calendar.html" class="article-link" 
+            >
+              <div class="article-data-outer">
+                <div class="image-container">
+                  <img src="./images/calendarCYCLE.png" class="article-image" /> 
+                </div>
+                <div class="article-data">
+                  <h2 class="article-title">
+                    Calender
+                  </h2>
+                  <p class="article-excerpt">
+                    Calender
+                  </p>
+                  <div class="article-metadata">
+                    February 2, 2020
+                  </div>
+                </div>
+              </div>
+            </a>
+            
+            
+            
+                </div>
+                
+                
+                  
+                
+            
+        
+            
+            
+                <div class="post-row">
+            
             <a href="./post/gallery.html" class="article-link" 
+            
+              
             >
               <div class="article-data-outer">
                 <div class="image-container">
@@ -227,19 +307,14 @@ xmlns="http://www.w3.org/2000/svg"
             
             
             
-                </div>
-                
-                
-                  
-                
-            
         
             
             
-                <div class="post-row">
-            
             <a href="./post/stats.html" class="article-link" 
             
+              
+                id="article-link-bigger"
+                
               
             >
               <div class="article-data-outer">
@@ -262,8 +337,16 @@ xmlns="http://www.w3.org/2000/svg"
             
             
             
+                </div>
+                
+                
+                  
+                
+            
         
             
+            
+                <div class="post-row">
             
             <a href="./post/people.html" class="article-link" 
             
@@ -292,23 +375,10 @@ xmlns="http://www.w3.org/2000/svg"
             
             
             
-                </div>
-                
-                
-                  
-                
-            
         
             
             
-                <div class="post-row">
-            
             <a href="./post/routes/route1.html" class="article-link" 
-            
-              
-                id="article-link-bigger"
-                
-              
             >
               <div class="article-data-outer">
                 <div class="image-container">
@@ -330,10 +400,20 @@ xmlns="http://www.w3.org/2000/svg"
             
             
             
+                </div>
+                
+                
+                  
+                
+            
         
             
             
+                <div class="post-row">
+            
             <a href="./post/about.html" class="article-link" 
+            
+              
             >
               <div class="article-data-outer">
                 <div class="image-container">
@@ -355,19 +435,14 @@ xmlns="http://www.w3.org/2000/svg"
             
             
             
-                </div>
-                
-                
-                  
-                
-            
         
             
             
-                <div class="post-row">
-            
             <a href="./post/feed.html" class="article-link" 
             
+              
+                id="article-link-bigger"
+                
               
             >
               <div class="article-data-outer">
@@ -390,6 +465,12 @@ xmlns="http://www.w3.org/2000/svg"
             
             
             
+                </div>
+                
+                
+                  
+                
+            
         
     </div>
     
@@ -407,7 +488,7 @@ xmlns="http://www.w3.org/2000/svg"
       <div class="footer-hr"></div>
       <div class="footer-container">
         <div class="footer-text">
-          © 2020 Zavaar Shah
+          © 2020 <a href="https://github.com/thatziv">Zavaar Shah</a>
         </div>
         <div class="social-icon-outer">
     <div class="social-icon-container">

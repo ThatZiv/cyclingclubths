@@ -120,9 +120,9 @@
 
     <section id="articleHero" class="section narrow">
     <div class="article-hero">
-        <header class="article-header">
+        <header class="article-header">       
             <h1 class="article-hero-heading">Gallery</h1>
-            <div class="article-hero-subtitle">
+            <div class="article-hero-subtitle">  
                 <div class="article-meta">
                     
 
@@ -349,7 +349,6 @@ xmlns="http://www.w3.org/2000/svg"
 
 <script>
     var pics = "1.jpg, 2.jpg, 3.jpg, 4.jpg, 5.jpg".split(", ")
-
     for (let i in pics) {
         
         var imageDiv = document.createElement("div")
@@ -357,7 +356,6 @@ xmlns="http://www.w3.org/2000/svg"
         
         var img = document.createElement("img")
         img.setAttribute("src", `/gallery/${pics[i]}`)
-        img.setAttribute("onclick",`window.location='/gallery/${pics[i]}'`)
         img.setAttribute("style", "width:100%")
         
         var numberTxt = document.createElement("div")
@@ -484,7 +482,7 @@ xmlns="http://www.w3.org/2000/svg"
       <div class="footer-hr"></div>
       <div class="footer-container">
         <div class="footer-text">
-          © 2020 Zavaar Shah
+          © 2020 <a href="https://github.com/thatziv">Zavaar Shah</a>
         </div>
         <div class="social-icon-outer">
     <div class="social-icon-container">

@@ -120,9 +120,9 @@
 
     <section id="articleHero" class="section narrow">
     <div class="article-hero">
-        <header class="article-header">
+        <header class="article-header">       
             <h1 class="article-hero-heading">Stats</h1>
-            <div class="article-hero-subtitle">
+            <div class="article-hero-subtitle">  
                 <div class="article-meta">
                     
 
@@ -323,6 +323,61 @@ xmlns="http://www.w3.org/2000/svg"
         });
         </script>
 
+<h2 id="participants-per-after-school-meet">Participants Per After-School Meet.</h2>
+
+   
+        <canvas id='afterschool_participants'></canvas>
+        
+        <script>
+            
+
+        
+        instance["afterschool_participants"] = {}
+        instance["afterschool_participants"].data = "1\/28\/2020, 14 | 2\/11\/2020, 9".split(" | ")
+   
+        
+        instance["afterschool_participants"].x = []
+        instance["afterschool_participants"].y = []
+        instance["afterschool_participants"].data.forEach((item,index) => {
+            let j = item.split(", ")
+            instance["afterschool_participants"].x.push(j[0])
+            instance["afterschool_participants"].y.push(j[1])
+        })
+        
+        instance["afterschool_participants"].total = instance["afterschool_participants"].y.reduce(function(acc, val) { return parseInt(acc) + parseInt(val); }, 0)
+        var ctx = document.getElementById('afterschool_participants');
+        instance["afterschool_participants"].myChart = new Chart(ctx, {
+            type: "line",
+            data: {
+                labels: instance["afterschool_participants"].x,
+                datasets: [{
+                    label: `"# of People", Total: ${instance["afterschool_participants"].total}`,
+                    data: instance["afterschool_participants"].y,
+                    backgroundColor: [
+                        'rgba( 166, 81, 105, 0.35)',
+                    ],
+                    borderColor: [
+                        '#cd7a92',
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    angleLines: {
+                        display: true
+                    },
+                    
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+        </script>
+
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
 <blockquote>
@@ -407,7 +462,7 @@ xmlns="http://www.w3.org/2000/svg"
       <div class="footer-hr"></div>
       <div class="footer-container">
         <div class="footer-text">
-          © 2020 Zavaar Shah
+          © 2020 <a href="https://github.com/thatziv">Zavaar Shah</a>
         </div>
         <div class="social-icon-outer">
     <div class="social-icon-container">

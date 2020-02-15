@@ -120,9 +120,9 @@
 
     <section id="articleHero" class="section narrow">
     <div class="article-hero">
-        <header class="article-header">
+        <header class="article-header">       
             <h1 class="article-hero-heading">Winter Route 2 - CURRENT</h1>
-            <div class="article-hero-subtitle">
+            <div class="article-hero-subtitle">  
                 <div class="article-meta">
                     
 
@@ -262,7 +262,7 @@ xmlns="http://www.w3.org/2000/svg"
     ], function (Map, MapView, Graphic, GraphicsLayer, Locate, Track, Fullscreen, Legend, FeatureLayer) {
 
       var map = new Map({
-        basemap: new Date().getHours() < 18 ? "gray" : "dark-gray-vector",
+        basemap: new Date().getHours() < 18 ? "streets-navigation-vector" : "streets-night-vector",
       });
 
       var view = new MapView({
@@ -314,6 +314,8 @@ xmlns="http://www.w3.org/2000/svg"
       });
 
       document.getElementById("distance").innerHTML = `≈ ${dist.toFixed(2)} Miles`;
+      var est_time = (dist / 9.5) * 3600
+      document.getElementById("est_time").innerHTML = formatTime(est_time);
 
       var polyline = {
         type: "polyline",
@@ -358,6 +360,48 @@ xmlns="http://www.w3.org/2000/svg"
         }
       });
       graphicsLayer.add(pictureGraphic);
+
+      
+      let last = matrix[matrix.length - 1]
+      var destGraphic = new Graphic({
+        geometry: {
+          type: "point",
+          longitude: last[0],
+          latitude: last[1]
+        },
+        symbol: {
+          type: "simple-marker",
+          style: "triangle",
+          size: "22px",  
+          color: "rgb(212, 53, 53)",
+          outline: {  
+            color: [120, 147, 244],
+            width: 1.5  
+          }
+        }
+      });
+      
+      var destTextGraphic = new Graphic({
+        geometry: {
+          type: "point",
+          longitude: last[0],
+          latitude: last[1]
+        },
+        symbol: {
+          type: "text",
+          color: [25, 25, 25],
+          haloColor: [255, 255, 255],
+          haloSize: "1px",
+          text: "Destination",
+          xoffset: 0,
+          yoffset: -20,
+          font: {
+            size: 10
+          }
+        }
+      });
+      graphicsLayer.add(destTextGraphic);
+      graphicsLayer.add(destGraphic);
 
       
       var polygon = {
@@ -460,7 +504,17 @@ xmlns="http://www.w3.org/2000/svg"
         let dist = Math.sqrt(Math.pow((x2 - x1), 2) + Math.pow((y2 - y1), 2))
         return dist
       }
+      function formatTime(secs) {
+        var sec_num = parseInt(secs, 10); 
+        var hours = Math.floor(sec_num / 3600);
+        var minutes = Math.floor((sec_num - (hours * 3600)) / 60);
+        var seconds = sec_num - (hours * 3600) - (minutes * 60);
 
+        if (hours < 10) { hours = "0" + hours; }
+        if (minutes < 10) { minutes = "0" + minutes; }
+        if (seconds < 10) { seconds = "0" + seconds; }
+        return hours + ':' + minutes + ':' + seconds;
+      }
       function distance(v1, v2, unit) {
 
         if (typeof (v1) !== "object" || typeof (v2) !== "object") {
@@ -493,8 +547,10 @@ xmlns="http://www.w3.org/2000/svg"
           return dist;
         }
       }   
+
       var countDownDate = new Date("Feb 15, 2020 12:00:00")
-      var est = "01:00:00".split(":")
+      var estFormatted = formatTime(est_time)
+      var est = estFormatted.split(":")
       var EstEnd = new Date(moment(countDownDate, "MMM DD YYYY HH:MM:SS").add(est[0], "h").add(est[1], "m").add(est[2], "s")).getTime()
       
       var tog = true
@@ -539,7 +595,6 @@ xmlns="http://www.w3.org/2000/svg"
           tog = false;
         }
       }, 1000);
-      console.log('')
     });
 
 
@@ -552,10 +607,9 @@ xmlns="http://www.w3.org/2000/svg"
     <h3 style="color:gray; text-align: center"><b>COUNTDOWN: </b> <span id="cntDwn"></span></h3>
     <b>STATUS: </b> <span id="status"></span>
     <b>START TIME: </b>02/15/2020 @ 12:00 PM (noon) EST,
-    <b>END TIME: </b>02/15/2020 @ 1:00 PM EST,
-    <b>ESTIMATED DURATION: </b>01:00:00,
+    <b>ESTIMATED DURATION: </b> <span id="est_time">calculating...</span>,
     <b>TOTAL DISTANCE: </b> <span id="distance">calculating...</span>
-    <b>NOTE: </b>Might take a bit longer due to weather and wind.
+    <b>NOTE: </b>Might take a bit longer due to weather and wind. Also time is not accounted for stops and sight-seeing.
   </div>
   <div id="roleInfo">
     <b>KEY:</b><br>
@@ -591,8 +645,28 @@ xmlns="http://www.w3.org/2000/svg"
     <div class="next-articles-grid" numberOfArticles={numberOfArticles}>
         <div class="post-row">
             
-                <a href="../../post/gallery.html" class="article-link"
+                <a href="../../post/calendar.html" class="article-link"
                  id="article-link-bigger">
+                    <div>
+                        <div class="image-container">
+                            <img src="../../images/calendarCYCLE.png" class="article-image" /> 
+                        </div>
+                        <div>
+                            <h2 class="article-title">
+                                Calender
+                            </h2>
+                            <p class="article-excerpt">
+                                Calender
+                            </p>
+                            <div class="article-metadata">
+                                February 2, 2020
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            
+                <a href="../../post/gallery.html" class="article-link"
+                >
                     <div>
                         <div class="image-container">
                             <img src="../../images/galleryCYCLE.png" class="article-image" /> 
@@ -603,26 +677,6 @@ xmlns="http://www.w3.org/2000/svg"
                             </h2>
                             <p class="article-excerpt">
                                 Photos and Archives
-                            </p>
-                            <div class="article-metadata">
-                                February 2, 2020
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            
-                <a href="../../post/stats.html" class="article-link"
-                >
-                    <div>
-                        <div class="image-container">
-                            <img src="../../images/statsCYCLE.png" class="article-image" /> 
-                        </div>
-                        <div>
-                            <h2 class="article-title">
-                                Stats
-                            </h2>
-                            <p class="article-excerpt">
-                                Statistics of the club.
                             </p>
                             <div class="article-metadata">
                                 February 2, 2020
@@ -646,7 +700,7 @@ xmlns="http://www.w3.org/2000/svg"
       <div class="footer-hr"></div>
       <div class="footer-container">
         <div class="footer-text">
-          © 2020 Zavaar Shah
+          © 2020 <a href="https://github.com/thatziv">Zavaar Shah</a>
         </div>
         <div class="social-icon-outer">
     <div class="social-icon-container">
