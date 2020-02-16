@@ -207,7 +207,8 @@ xmlns="http://www.w3.org/2000/svg"
 </aside>
 
     <article  id="articleContent" class="post-content">
-        <style>
+        <!-- raw HTML omitted -->
+<style>
     * {
         box-sizing: border-box
     }
@@ -348,23 +349,23 @@ xmlns="http://www.w3.org/2000/svg"
 <div id="dots" style="text-align:center"></div>
 
 <script>
-    var pics = "1.jpg, 2.jpg, 3.jpg, 4.jpg, 5.jpg".split(", ")
-    for (let i in pics) {
+    var pics = parseInt("18")
+    for (var i = 1; i<=pics; i++) {
         
         var imageDiv = document.createElement("div")
         imageDiv.setAttribute("class", "mySlides fade")
         
         var img = document.createElement("img")
-        img.setAttribute("src", `/gallery/${pics[i]}`)
+        img.setAttribute("src", `/gallery/${i}.jpg`)
         img.setAttribute("style", "width:100%")
         
         var numberTxt = document.createElement("div")
         numberTxt.setAttribute("class", "numbertext")
-        numberTxt.innerHTML = `${parseInt(i)+1} / ${pics.length}`
-        numberTxt.setAttribute("onclick",`window.location='/gallery/${pics[i]}'`)
+        numberTxt.innerHTML = `${parseInt(i)} / ${pics}`
+        numberTxt.setAttribute("onclick",`window.location='/gallery/${i}.jpg'`)
         var dots = document.createElement("span")
         dots.setAttribute("class", "dot")
-        dots.setAttribute("onclick", `currentSlide(${parseInt(i)+1})`)
+        dots.setAttribute("onclick", `currentSlide(${parseInt(i)})`)
         var thaDiv = document.getElementById("slideshow")
         var dotsDiv = document.getElementById("dots")
         thaDiv.appendChild(imageDiv)

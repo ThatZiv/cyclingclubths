@@ -314,7 +314,7 @@ xmlns="http://www.w3.org/2000/svg"
       });
 
       document.getElementById("distance").innerHTML = `≈ ${dist.toFixed(2)} Miles`;
-      var est_time = (dist / 9.5) * 3600
+      var est_time = (dist / 7) * 3600
       document.getElementById("est_time").innerHTML = formatTime(est_time);
 
       var polyline = {
@@ -550,12 +550,22 @@ xmlns="http://www.w3.org/2000/svg"
 
       var countDownDate = new Date("Feb 1, 2020 12:00:00")
       var estFormatted = formatTime(est_time)
+      var strt = moment(countDownDate)
       var est = estFormatted.split(":")
-      var EstEnd = new Date(moment(countDownDate, "MMM DD YYYY HH:MM:SS").add(est[0], "h").add(est[1], "m").add(est[2], "s")).getTime()
+      strt.add(
+        {
+          hours: parseInt(est[0]),
+          minutes: parseInt(est[1]),
+          seconds: parseInt(est[2]),
+        }
+      )
+      
+
+      var EstEnd = new Date(strt).getTime()
       
       var tog = true
       
-      var change = true
+      var change = true 
       var status = null
       var x = setInterval(function () {
         if (!tog) { return }
@@ -575,6 +585,7 @@ xmlns="http://www.w3.org/2000/svg"
             + minutes + "m " + seconds + "s ";
 
         }
+        
         status = "Incomplete"
         document.getElementById("status").innerHTML = status;
         document.getElementById("status").style = "color: red; text-align: center";
@@ -584,7 +595,6 @@ xmlns="http://www.w3.org/2000/svg"
           document.getElementById("cntDwn").innerHTML = status;
           document.getElementById("cntDwn").style = "color: orange; text-align: center"
           document.getElementById("status").style = "color: orange; text-align: center"
-          change = false
         } else if (distance < 0 && endDist < 0) {
           clearInterval(x);
           status = "Completed"
