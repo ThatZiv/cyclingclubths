@@ -6,10 +6,19 @@
     <description>Recent content on Cycling Club at Troy High</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 10 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 25 Feb 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="//thatziv.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Apparel</title>
+      <link>//thatziv.github.io/post/apparel.html</link>
+      <pubDate>Tue, 25 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>//thatziv.github.io/post/apparel.html</guid>
+      <description>Design #1 - Windbreakers </description>
+    </item>
     
     <item>
       <title>Winter Route 2 - COMPLETED</title>
