@@ -262,7 +262,7 @@ xmlns="http://www.w3.org/2000/svg"
     ], function (Map, MapView, Graphic, GraphicsLayer, Locate, Track, Fullscreen, Legend, FeatureLayer) {
 
       var map = new Map({
-        basemap: new Date().getHours() < 18 ? "streets-navigation-vector" : "streets-night-vector",
+        basemap: new Date().getHours() <= 18 && new Date().getHours() >= 7 ? "streets-navigation-vector" : "streets-night-vector",
       });
 
       var view = new MapView({
