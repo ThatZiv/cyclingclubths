@@ -12,7 +12,7 @@
     
     
     <item>
-      <title>Winter Route 3 - CURRENT</title>
+      <title>Winter Route 3 - COMPLETED</title>
       <link>//thatziv.github.io/post/routes/route3.html</link>
       <pubDate>Sat, 29 Feb 2020 00:00:00 +0000</pubDate>
       
@@ -62,7 +62,7 @@
       <pubDate>Sat, 01 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>//thatziv.github.io/post/stats.html</guid>
-      <description>var instance = {} Distance Traveled Per Meet. instance[&#34;distance&#34;] = {}instance[&#34;distance&#34;].data = &#34;Winter Route #1, 16 | Winter Route #2, 10.2&#34;.split(&#34; | &#34;)instance[&#34;distance&#34;].x = []instance[&#34;distance&#34;].y = []instance[&#34;distance&#34;].data.forEach((item,index) = {let j = item.split(&#34;, &#34;)instance[&#34;distance&#34;].x.push(j[0])instance[&#34;distance&#34;].y.push(j[1])})instance[&#34;distance&#34;].total = instance[&#34;distance&#34;].y.reduce(function(acc, val) { return parseInt(acc) + parseInt(val); }, 0)var ctx = document.getElementById(&#39;distance&#39;);instance[&#34;distance&#34;].myChart = new Chart(ctx, {type: &#34;line&#34;,data: {labels: instance[&#34;</description>
+      <description>var instance = {} Distance Traveled Per Meet. instance[&#34;distance&#34;] = {}instance[&#34;distance&#34;].data = &#34;Winter Route #1, 16 | Winter Route #2, 10.2 | Winter Route #3, 14.6 &#34;.split(&#34; | &#34;)instance[&#34;distance&#34;].x = []instance[&#34;distance&#34;].y = []instance[&#34;distance&#34;].data.forEach((item,index) = {let j = item.split(&#34;, &#34;)instance[&#34;distance&#34;].x.push(j[0])instance[&#34;distance&#34;].y.push(j[1])})instance[&#34;distance&#34;].total = instance[&#34;distance&#34;].y.reduce(function(acc, val) { return parseInt(acc) + parseInt(val); }, 0)var ctx = document.getElementById(&#39;distance&#39;);instance[&#34;distance&#34;].myChart = new Chart(ctx, {type: &#34;</description>
     </item>
     
     <item>
